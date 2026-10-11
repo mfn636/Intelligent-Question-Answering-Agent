@@ -1,0 +1,2875 @@
+{
+  "version": "memory-v1",
+  "authorship": "Agent-authored synthetic e-commerce conversations; not independently human annotated",
+  "purpose": "Paired fixed-transcript memory extraction evaluation, not end-to-end shopping task success",
+  "cases": [
+    {
+      "id": "commute_laptop",
+      "topic": "通勤笔记本",
+      "turns": [
+        {
+          "user": "买通勤笔记本，预算最多6500元，只限这次采购。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "我每天背着走，机身重量不要超过1.35千克。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "我有旧接收器，必须保留USB-A接口，不想随身带转接头。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "这次先排除Vortex，不要把它作为候选推荐。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "主要用途是编程，偶尔看视频不算主要需求。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "先把NB-F17放进候选清单，但这不是最终购买决定。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是编程。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"这次购机预算上限（元，只填数字）\",\"weight\":\"能接受的重量上限（千克，只填数字）\",\"port\":\"必须具备的接口\",\"excluded\":\"明确排除的品牌\",\"purpose\":\"主要用途（沿用用户原词）\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次通勤笔记本的预算：现在上限改成7200元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要USB-A这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"这次购机预算上限（元，只填数字）\",\"weight\":\"能接受的重量上限（千克，只填数字）\",\"port\":\"必须具备的接口\",\"excluded\":\"明确排除的品牌\",\"purpose\":\"主要用途（沿用用户原词）\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为NB-G24。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除Vortex。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"这次购机预算上限（元，只填数字）\",\"weight\":\"能接受的重量上限（千克，只填数字）\",\"port\":\"必须具备的接口\",\"excluded\":\"明确排除的品牌\",\"purpose\":\"主要用途（沿用用户原词）\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "6500",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "weight": {
+              "value": "1.35",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "port": {
+              "value": "USB-A",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "Vortex",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "编程",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "NB-F17",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "7200",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "weight": {
+              "value": "1.35",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "port": {
+              "value": "USB-A",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "Vortex",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "编程",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "NB-F17",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "7200",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "weight": {
+              "value": "1.35",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "port": {
+              "value": "USB-A",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "Vortex",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "编程",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "NB-G24",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gaming_laptop",
+      "topic": "宿舍游戏本",
+      "turns": [
+        {
+          "user": "这次买宿舍游戏本，我的预算上限是8300元。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "内存希望直接配32GB，暂时不想自己拆机升级。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "我明确要求独显直连，其他显示切换方案不要当成等价替代。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "我不接受RGB灯效，宿舍晚上用会影响室友。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "主要玩赛车模拟，其他类型玩得很少。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "暂时考虑NB-R63，先登记候选，不要替我下决定。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是赛车模拟。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"memory\":\"要求的内存容量（GB，只填数字）\",\"feature\":\"必须支持的功能\",\"excluded\":\"排除的外观元素\",\"purpose\":\"主要游戏类型\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次宿舍游戏本的预算：现在上限改成9100元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要独显直连这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"memory\":\"要求的内存容量（GB，只填数字）\",\"feature\":\"必须支持的功能\",\"excluded\":\"排除的外观元素\",\"purpose\":\"主要游戏类型\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为NB-R78。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除RGB灯效。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"memory\":\"要求的内存容量（GB，只填数字）\",\"feature\":\"必须支持的功能\",\"excluded\":\"排除的外观元素\",\"purpose\":\"主要游戏类型\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "8300",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "memory": {
+              "value": "32",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "独显直连",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "RGB灯效",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "赛车模拟",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "NB-R63",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "9100",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "memory": {
+              "value": "32",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "独显直连",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "RGB灯效",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "赛车模拟",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "NB-R63",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "9100",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "memory": {
+              "value": "32",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "独显直连",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "RGB灯效",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "赛车模拟",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "NB-R78",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "elder_phone",
+      "topic": "长辈手机",
+      "turns": [
+        {
+          "user": "给父亲换手机，这次预算最多1850元。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "存储要256GB，他不太会清理照片和聊天文件。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "特别需要简易模式，图标和字体要方便老人看。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "曲面屏不要，父亲之前经常误触屏幕边缘。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "主要是视频通话，不用围绕大型游戏做推荐。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "PH-L42先记作备选，尚未决定购买。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是视频通话。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"storage\":\"要求的存储容量（GB，只填数字）\",\"feature\":\"特别需要的系统功能\",\"excluded\":\"明确排除的屏幕形态\",\"purpose\":\"主要使用场景\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次长辈手机的预算：现在上限改成2300元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要简易模式这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"storage\":\"要求的存储容量（GB，只填数字）\",\"feature\":\"特别需要的系统功能\",\"excluded\":\"明确排除的屏幕形态\",\"purpose\":\"主要使用场景\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为PH-L56。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除曲面屏。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"storage\":\"要求的存储容量（GB，只填数字）\",\"feature\":\"特别需要的系统功能\",\"excluded\":\"明确排除的屏幕形态\",\"purpose\":\"主要使用场景\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "1850",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "storage": {
+              "value": "256",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "简易模式",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "曲面屏",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "视频通话",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "PH-L42",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "2300",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "storage": {
+              "value": "256",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "简易模式",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "曲面屏",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "视频通话",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "PH-L42",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "2300",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "storage": {
+              "value": "256",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "简易模式",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "曲面屏",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "视频通话",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "PH-L56",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "photo_phone",
+      "topic": "旅行拍照手机",
+      "turns": [
+        {
+          "user": "准备买旅行拍照用的手机，本次预算上限4600元。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "存储选512GB，我会在旅途中保存大量原始照片。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "需要光学防抖，不要只用电子防抖来满足这个要求。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "外观先排除白色，这只是这次选手机的偏好。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "我最重视夜景，白天拍照并不是这次升级的重点。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "当前候选是PH-C28，但我还没有确认买哪款。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是夜景。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"storage\":\"要求的存储容量（GB，只填数字）\",\"feature\":\"必须具备的拍摄功能\",\"excluded\":\"明确排除的颜色\",\"purpose\":\"最重视的拍摄题材\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次旅行拍照手机的预算：现在上限改成5300元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要光学防抖这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"storage\":\"要求的存储容量（GB，只填数字）\",\"feature\":\"必须具备的拍摄功能\",\"excluded\":\"明确排除的颜色\",\"purpose\":\"最重视的拍摄题材\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为PH-C39。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除白色。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"storage\":\"要求的存储容量（GB，只填数字）\",\"feature\":\"必须具备的拍摄功能\",\"excluded\":\"明确排除的颜色\",\"purpose\":\"最重视的拍摄题材\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "4600",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "storage": {
+              "value": "512",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "光学防抖",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "白色",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "夜景",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "PH-C28",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "5300",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "storage": {
+              "value": "512",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "光学防抖",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "白色",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "夜景",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "PH-C28",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "5300",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "storage": {
+              "value": "512",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "光学防抖",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "白色",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "夜景",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "PH-C39",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "child_tablet",
+      "topic": "儿童阅读平板",
+      "turns": [
+        {
+          "user": "给孩子选阅读平板，这次最多花1700元。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "屏幕不要超过9英寸，孩子自己拿着要方便。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "必须有儿童模式，我需要限制使用时段。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "不要蜂窝版，平时就在家里使用无线网络。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "主要用途是绘本阅读，不打算把它当成游戏设备。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "先保留TAB-K14这个候选，不能当成已经选定。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是绘本阅读。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"size\":\"屏幕尺寸上限（英寸，只填数字）\",\"feature\":\"必须具备的管理功能\",\"excluded\":\"明确排除的网络版本\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次儿童阅读平板的预算：现在上限改成2050元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要儿童模式这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"size\":\"屏幕尺寸上限（英寸，只填数字）\",\"feature\":\"必须具备的管理功能\",\"excluded\":\"明确排除的网络版本\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为TAB-K27。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除蜂窝版。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"size\":\"屏幕尺寸上限（英寸，只填数字）\",\"feature\":\"必须具备的管理功能\",\"excluded\":\"明确排除的网络版本\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "1700",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "size": {
+              "value": "9",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "儿童模式",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "蜂窝版",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "绘本阅读",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "TAB-K14",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "2050",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "size": {
+              "value": "9",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "儿童模式",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "蜂窝版",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "绘本阅读",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "TAB-K14",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "2050",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "size": {
+              "value": "9",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "儿童模式",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "蜂窝版",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "绘本阅读",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "TAB-K27",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "study_tablet",
+      "topic": "学习笔记平板",
+      "turns": [
+        {
+          "user": "我想买学习平板，当前采购预算上限3200元。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "容量要256GB，本地会存课程视频和扫描文档。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "必须支持主动式手写笔，不把普通电容笔算作满足要求。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "我不需要键盘套，包里已经有独立键盘了。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "主要用于论文批注，娱乐需求放在后面考虑。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "TAB-S31先进入备选，是否购买还没确认。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是论文批注。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"storage\":\"要求的存储容量（GB，只填数字）\",\"feature\":\"必须支持的配件\",\"excluded\":\"明确不需要的配件\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次学习笔记平板的预算：现在上限改成3800元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要主动式手写笔这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"storage\":\"要求的存储容量（GB，只填数字）\",\"feature\":\"必须支持的配件\",\"excluded\":\"明确不需要的配件\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为TAB-S46。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除键盘套。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"storage\":\"要求的存储容量（GB，只填数字）\",\"feature\":\"必须支持的配件\",\"excluded\":\"明确不需要的配件\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "3200",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "storage": {
+              "value": "256",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "主动式手写笔",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "键盘套",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "论文批注",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "TAB-S31",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "3800",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "storage": {
+              "value": "256",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "主动式手写笔",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "键盘套",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "论文批注",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "TAB-S31",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "3800",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "storage": {
+              "value": "256",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "主动式手写笔",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "键盘套",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "论文批注",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "TAB-S46",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "coding_monitor",
+      "topic": "编程显示器",
+      "turns": [
+        {
+          "user": "给书桌买显示器，这次的预算上限是2100元。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "屏幕尺寸选27英寸，不要自动给我换成更大的。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "支架必须支持旋转竖屏，我会用来阅读长代码。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "镜面屏不要，桌子旁边有大窗户容易反光。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "主要用途是代码审查，不追求电竞模式。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "MON-D52先作为候选，我还没决定购买。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是代码审查。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"size\":\"要求的屏幕尺寸（英寸，只填数字）\",\"feature\":\"支架必须支持的功能\",\"excluded\":\"明确排除的屏幕表面\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次编程显示器的预算：现在上限改成2600元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要旋转竖屏这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"size\":\"要求的屏幕尺寸（英寸，只填数字）\",\"feature\":\"支架必须支持的功能\",\"excluded\":\"明确排除的屏幕表面\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为MON-D69。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除镜面屏。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"size\":\"要求的屏幕尺寸（英寸，只填数字）\",\"feature\":\"支架必须支持的功能\",\"excluded\":\"明确排除的屏幕表面\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "2100",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "size": {
+              "value": "27",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "旋转竖屏",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "镜面屏",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "代码审查",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "MON-D52",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "2600",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "size": {
+              "value": "27",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "旋转竖屏",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "镜面屏",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "代码审查",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "MON-D52",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "2600",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "size": {
+              "value": "27",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "旋转竖屏",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "镜面屏",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "代码审查",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "MON-D69",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "design_monitor",
+      "topic": "摄影修图显示器",
+      "turns": [
+        {
+          "user": "这次为修图买显示器，预算最多3900元。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "我需要32英寸的屏幕，桌面空间足够。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "希望支持USB-C一线通，接笔记本时少插几根线。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "不要曲面屏，处理建筑照片时我希望直线观感稳定。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "主要做照片修图，视频剪辑只是偶尔使用。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "MON-P23只是目前备选，还不是最终选定型号。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是照片修图。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"size\":\"要求的屏幕尺寸（英寸，只填数字）\",\"feature\":\"必须支持的连接功能\",\"excluded\":\"明确排除的屏幕形态\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次摄影修图显示器的预算：现在上限改成4450元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要USB-C一线通这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"size\":\"要求的屏幕尺寸（英寸，只填数字）\",\"feature\":\"必须支持的连接功能\",\"excluded\":\"明确排除的屏幕形态\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为MON-P38。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除曲面屏。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"size\":\"要求的屏幕尺寸（英寸，只填数字）\",\"feature\":\"必须支持的连接功能\",\"excluded\":\"明确排除的屏幕形态\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "3900",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "size": {
+              "value": "32",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "USB-C一线通",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "曲面屏",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "照片修图",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "MON-P23",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "4450",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "size": {
+              "value": "32",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "USB-C一线通",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "曲面屏",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "照片修图",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "MON-P23",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "4450",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "size": {
+              "value": "32",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "USB-C一线通",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "曲面屏",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "照片修图",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "MON-P38",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "office_keyboard",
+      "topic": "办公室键盘",
+      "turns": [
+        {
+          "user": "准备换办公室键盘，当前预算上限480元。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "配列就选87，不需要右侧数字区。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "需要双设备切换，要同时服务办公电脑和私人电脑。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "不要青轴，敲击声音会影响旁边同事。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "主要用途是文字录入，不以玩游戏为选购标准。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "先记下KEY-B16这个候选，我还没选定购买。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是文字录入。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"layout\":\"要求的配列（只填数字）\",\"feature\":\"必须支持的连接能力\",\"excluded\":\"明确排除的轴体\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次办公室键盘的预算：现在上限改成620元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要双设备切换这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"layout\":\"要求的配列（只填数字）\",\"feature\":\"必须支持的连接能力\",\"excluded\":\"明确排除的轴体\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为KEY-B29。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除青轴。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"layout\":\"要求的配列（只填数字）\",\"feature\":\"必须支持的连接能力\",\"excluded\":\"明确排除的轴体\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "480",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "layout": {
+              "value": "87",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "双设备切换",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "青轴",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "文字录入",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "KEY-B16",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "620",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "layout": {
+              "value": "87",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "双设备切换",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "青轴",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "文字录入",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "KEY-B16",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "620",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "layout": {
+              "value": "87",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "双设备切换",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "青轴",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "文字录入",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "KEY-B29",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "gaming_mouse",
+      "topic": "游戏鼠标",
+      "turns": [
+        {
+          "user": "想买游戏鼠标，这次预算最多360元。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "重量最多65克，不希望长时间用下来太累。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "必须支持2.4G无线，不接受只有蓝牙的型号。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "轨迹球不要，这次还是要普通移动式鼠标。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "主要玩射击游戏，办公不是这次购买的重点。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "MOU-T34先放在备选里，我还没有最终决定。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是射击游戏。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"weight\":\"重量上限（克，只填数字）\",\"feature\":\"必须具备的连接方式\",\"excluded\":\"明确排除的形态\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次游戏鼠标的预算：现在上限改成490元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要2.4G无线这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"weight\":\"重量上限（克，只填数字）\",\"feature\":\"必须具备的连接方式\",\"excluded\":\"明确排除的形态\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为MOU-T48。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除轨迹球。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"weight\":\"重量上限（克，只填数字）\",\"feature\":\"必须具备的连接方式\",\"excluded\":\"明确排除的形态\",\"purpose\":\"主要用途\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "360",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "weight": {
+              "value": "65",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "2.4G无线",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "轨迹球",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "射击游戏",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "MOU-T34",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "490",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "weight": {
+              "value": "65",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "2.4G无线",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "轨迹球",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "射击游戏",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "MOU-T34",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "490",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "weight": {
+              "value": "65",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "2.4G无线",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "轨迹球",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "射击游戏",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "MOU-T48",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "running_headphone",
+      "topic": "跑步耳机",
+      "turns": [
+        {
+          "user": "准备买跑步耳机，这次预算上限680元。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "单次续航至少8小时，这个数字不含充电盒补电。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "我需要开放式佩戴，跑步时还要听见环境声音。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "不要入耳式，之前长时间戴着耳道会不舒服。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "主要场景是户外跑步，不是坐在室内听歌。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "EAR-V21先记录为候选，仍未确认购买。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是户外跑步。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"duration\":\"单次续航下限（小时，只填数字）\",\"feature\":\"必须采用的佩戴方式\",\"excluded\":\"明确排除的佩戴方式\",\"purpose\":\"主要使用场景\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次跑步耳机的预算：现在上限改成850元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要开放式这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"duration\":\"单次续航下限（小时，只填数字）\",\"feature\":\"必须采用的佩戴方式\",\"excluded\":\"明确排除的佩戴方式\",\"purpose\":\"主要使用场景\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为EAR-V37。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除入耳式。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"duration\":\"单次续航下限（小时，只填数字）\",\"feature\":\"必须采用的佩戴方式\",\"excluded\":\"明确排除的佩戴方式\",\"purpose\":\"主要使用场景\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "680",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "duration": {
+              "value": "8",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "开放式",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "入耳式",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "户外跑步",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "EAR-V21",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "850",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "duration": {
+              "value": "8",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "开放式",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "入耳式",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "户外跑步",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "EAR-V21",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "850",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "duration": {
+              "value": "8",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "开放式",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "入耳式",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "户外跑步",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "EAR-V37",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    },
+    {
+      "id": "home_router",
+      "topic": "复式住宅路由器",
+      "turns": [
+        {
+          "user": "准备给家里换路由设备，这次预算最多920元。",
+          "assistant": "我会把这项要求记入本次采购条件。"
+        },
+        {
+          "user": "要覆盖145平方米，房子分上下两层。",
+          "assistant": "了解，这项限制需要在后续比较时核对。"
+        },
+        {
+          "user": "必须支持有线回程，两层之间已经预留了网线。",
+          "assistant": "好的，后面介绍候选时会检查这项需求。"
+        },
+        {
+          "user": "不要电力线方案，家里电器较多，之前试过不稳定。",
+          "assistant": "明白，会把这个排除条件纳入筛选。"
+        },
+        {
+          "user": "优先保障远程会议，下载速度可以排在后面。",
+          "assistant": "知道了，推荐理由需要围绕这个主要用途。"
+        },
+        {
+          "user": "先把ROU-H43作为候选，不代表我已经决定下单。",
+          "assistant": "已记录为候选，最终选择仍等待你确认。"
+        },
+        {
+          "user": "你可以提出一个备选建议，但不要替我确认购买，最终决定要等我说。",
+          "assistant": "可以另外看看ALT系列，不过这只是我的建议，不代表你已经选定，也不意味着它一定满足全部条件。"
+        },
+        {
+          "user": "现在先把需求整理清楚，我没有决定买哪个。后面有调整时，以我的新要求为准。",
+          "assistant": "明白，我会区分候选和最终决定；你没有确认的事项会继续保持未确认状态。"
+        },
+        {
+          "user": "参数表里的营销名词很多，帮我解释时用普通话说清楚实际影响，不用一口气介绍所有功能。",
+          "assistant": "可以从实际使用场景解释参数，再区分必要功能和附加功能；涉及具体型号的能力仍应查资料确认。"
+        },
+        {
+          "user": "主要用途再确认一下，仍然是远程会议。还没有下单，不用替我操作付款。",
+          "assistant": "主要用途保持不变；目前仍处于比较阶段，没有订单依据时不会假设已下单。"
+        },
+        {
+          "user": "买之前我想了解常见检查步骤，你可以说一般思路，具体售后规则等我选好商品再查。",
+          "assistant": "通常可以先核对包装、配件和型号，再检查外观与基本功能。具体退换条件应以购买渠道和商品政策为准。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"area\":\"需要覆盖的面积（平方米，只填数字）\",\"feature\":\"必须支持的组网能力\",\"excluded\":\"明确排除的组网方案\",\"purpose\":\"最优先保障的场景\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "调整一下这次复式住宅路由器的预算：现在上限改成1180元，之前那个预算作废。其他已经说过的要求先保持。",
+          "assistant": "已收到预算调整，后续以新的上限为准，不再沿用旧上限。"
+        },
+        {
+          "user": "如果几个候选都差不多，解释选择理由时优先说明取舍。我不想只看到一堆参数堆在一起。",
+          "assistant": "可以把差异关联到实际使用，再说明哪些优势有帮助、哪些功能可能闲置；没有证据的性能结论不应直接断言。"
+        },
+        {
+          "user": "网页图片看不清细节时，先告诉我还缺什么资料，不要从效果图猜接口或配件。",
+          "assistant": "可以补查官方规格、包装清单和实物细节图；现有资料不足时应明确标注无法确认。"
+        },
+        {
+          "user": "需要有线回程这一点也保持不变，核对商品时留意具体版本，不要混用其他版本的参数。",
+          "assistant": "这项要求不变，后续需要核对完整型号与版本，确认相关规格确实属于当前候选。"
+        },
+        {
+          "user": "如果后面要问客服，我希望问题一次列清楚，暂时不用真的联系任何人。",
+          "assistant": "可以先整理待核实的问题，包括版本、配件及相关规则；这些只是准备材料，不代表已经联系商家。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"area\":\"需要覆盖的面积（平方米，只填数字）\",\"feature\":\"必须支持的组网能力\",\"excluded\":\"明确排除的组网方案\",\"purpose\":\"最优先保障的场景\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        },
+        {
+          "user": "候选也更新一下：放弃之前那个编号，改为ROU-H58。这仍然只是备选，不能算已经确认购买。",
+          "assistant": "候选信息已更新；替换旧编号，但不会把备选当作最终购买决定。"
+        },
+        {
+          "user": "我希望最后的说明短一点，先给理由，再列需要我确认的地方。现在先继续整理。",
+          "assistant": "可以先陈述与需求直接相关的判断，再说明依据和待确认项，避免用过多无关参数增加阅读负担。"
+        },
+        {
+          "user": "看到限时活动也先别催我付款，优惠信息等真正准备下单的时候重新确认。",
+          "assistant": "活动资格、有效期和最终价格都可能变化，临近下单时应重新核实，不能把之前看到的信息当作当前有效承诺。"
+        },
+        {
+          "user": "再次确认仍然排除电力线。如果资料之间有矛盾，要先告诉我冲突，不要随意作结论。",
+          "assistant": "这个排除条件继续生效；资料有冲突时先列出分歧，再寻找可验证的依据。"
+        },
+        {
+          "user": "现在还没有下最终购买决定。请回顾已有需求，不确定的地方可以直接说不确定。",
+          "assistant": "好的，后续整理会以用户明确要求为依据，并区分已知条件、候选信息与仍未确认的事项。"
+        },
+        {
+          "user": "请只依据我们当前这段对话，提取最新仍有效的信息。只返回一个JSON对象，必须包含以下全部字段。数字可用数字或字符串，文本沿用用户原词；未提及或尚未确认的值填null，不能猜测。字段说明：{\"budget\":\"本次预算上限（元，只填数字）\",\"area\":\"需要覆盖的面积（平方米，只填数字）\",\"feature\":\"必须支持的组网能力\",\"excluded\":\"明确排除的组网方案\",\"purpose\":\"最优先保障的场景\",\"candidate\":\"目前保留的候选编号\",\"confirmed_choice\":\"用户已经明确确认购买的型号；只有候选或助手建议时填null\",\"invoice_title\":\"用户提供的发票抬头；未提供时填null\"}",
+          "assistant": "这轮仅核对现有需求，尚未作出购买决定；之后有明确修改时再更新。"
+        }
+      ],
+      "checkpoints": [
+        {
+          "turn": 12,
+          "expected": {
+            "budget": {
+              "value": "920",
+              "evidence_turn": 1,
+              "aliases": []
+            },
+            "area": {
+              "value": "145",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "有线回程",
+              "evidence_turn": 3,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "电力线",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "远程会议",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "ROU-H43",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 18,
+          "expected": {
+            "budget": {
+              "value": "1180",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "area": {
+              "value": "145",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "有线回程",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "电力线",
+              "evidence_turn": 4,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "远程会议",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "ROU-H43",
+              "evidence_turn": 6,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        },
+        {
+          "turn": 24,
+          "expected": {
+            "budget": {
+              "value": "1180",
+              "evidence_turn": 13,
+              "aliases": []
+            },
+            "area": {
+              "value": "145",
+              "evidence_turn": 2,
+              "aliases": []
+            },
+            "feature": {
+              "value": "有线回程",
+              "evidence_turn": 16,
+              "aliases": []
+            },
+            "excluded": {
+              "value": "电力线",
+              "evidence_turn": 22,
+              "aliases": []
+            },
+            "purpose": {
+              "value": "远程会议",
+              "evidence_turn": 10,
+              "aliases": []
+            },
+            "candidate": {
+              "value": "ROU-H58",
+              "evidence_turn": 19,
+              "aliases": []
+            },
+            "confirmed_choice": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            },
+            "invoice_title": {
+              "value": null,
+              "evidence_turn": null,
+              "aliases": []
+            }
+          }
+        }
+      ]
+    }
+  ]
+}
