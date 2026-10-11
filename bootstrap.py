@@ -2,7 +2,7 @@
 bootstrap.py
 
 组合根：显式创建应用资源，再用共享依赖组装各个会话。
-导入本模块不会读取配置或数据、创建模型客户端、打开向量库。
+导入本模块不会读取配置或数据、创建模型客户端、打开向量库；默认 RAG 依赖延迟到首次知识查询。
 create_application()
     ↓
 没有传入 llm，则准备延迟创建的客户端，首次模型请求才读取配置并创建
@@ -144,4 +144,3 @@ def build_agent(
         router=router,
         workflows=workflows,
     )
-
