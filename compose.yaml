@@ -1,0 +1,30 @@
+services:
+  agent:
+    build: .
+    environment:
+      DEEPSEEK_API_KEY: ${DEEPSEEK_API_KEY:-}
+      LLM_MODEL: ${LLM_MODEL:-deepseek-v4-flash}
+      OLLAMA_URL: ${OLLAMA_URL:-http://ollama:11434}
+    volumes:
+      - qdrant_data:/app/rag/qdrant_data
+    stdin_open: true
+    tty: true
+    init: true
+
+  ollama:
+    image: ollama/ollama:latest
+    profiles: [rag]
+    environment:
+      OLLAMA_HOST: 0.0.0.0:11434
+    volumes:
+      - ollama_models:/root/.ollama
+    healthcheck:
+      test: [CMD, ollama, list]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+      start_period: 10s
+
+volumes:
+  qdrant_data:
+  ollama_models:

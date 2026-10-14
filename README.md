@@ -27,6 +27,9 @@ The system handles product recommendations, product specifications, inventory qu
 - **Dependency and lifecycle management**
   - The composition root owns shared LLM, tool, and retrieval resources.
   - The default LLM and RAG dependencies are initialized lazily when a request actually needs them.
+- **Docker packaging**
+  - A non-root CLI image and Docker Compose configuration with an optional Ollama service.
+  - Persistent volumes for model files and the knowledge index, with API credentials supplied at runtime.
 
 ## Architecture
 
@@ -48,6 +51,8 @@ LocalProvider → LazySearchService → RagSearchAdapter → Retriever
 
 ## Requirements
 
+For local Python runs:
+
 - Python 3.11+
 - A DeepSeek-compatible chat API for normal Agent requests
 - Ollama with the `bge-m3` embedding model for RAG queries and ingestion
@@ -60,6 +65,9 @@ python -m pip install -r requirements.txt
 ```
 
 Copy `.env.example` to `.env` and set `DEEPSEEK_API_KEY`. `LLM_MODEL` is optional.
+
+For containerized runs, follow [Run with Docker](#run-with-docker). A host Python
+installation is not required.
 
 ## Run the CLI
 
@@ -75,6 +83,64 @@ The default application loads local product and inventory data and exposes four 
 - `search_knowledge`
 
 Product and inventory requests use local data. The Qdrant client and embedding service are initialized only when the knowledge-search tool is first used.
+
+## Run with Docker
+
+Install Docker with the Compose v2 plugin (Docker Desktop on Windows/macOS),
+copy `.env.example` to `.env`, and set `DEEPSEEK_API_KEY` for model-backed requests.
+The container runs the same interactive CLI; it does not expose an HTTP API.
+
+Build the image and open a conversation:
+
+```bash
+docker compose build agent
+docker compose run --rm agent
+```
+
+Enter `exit` to close the conversation. Rule-matched greetings and fixed product
+queries do not require an API key. Knowledge retrieval additionally requires
+the RAG setup below.
+
+### Enable knowledge retrieval
+
+Start the optional Ollama service, download BGE-M3, and build the knowledge index:
+
+```bash
+docker compose --profile rag up -d --wait ollama
+docker compose exec ollama ollama pull bge-m3
+docker compose run --rm agent python -m rag.ingest
+docker compose run --rm agent
+```
+
+The first model download and index build can take several minutes. The bundled
+Ollama service uses CPU by default and is reachable only on the Compose network;
+no host ports are published. Models are stored in the `ollama_models` volume and
+the local Qdrant database in `qdrant_data`. Subsequent conversations reuse both.
+Conversation history remains in memory and ends with the CLI process.
+
+Ingestion rebuilds the knowledge collection. Exit any Agent process using the
+index before running ingestion: Qdrant local storage supports only one process
+accessing the same database directory. Multiple Agent containers cannot share
+this volume concurrently.
+
+To reuse an existing Ollama server instead of starting the bundled service, set
+`OLLAMA_URL` in `.env` to an address reachable from the container. On Docker
+Desktop, `http://host.docker.internal:11434` addresses the host machine; Ollama
+must accept connections from Docker. Linux users can use a reachable server
+address or configure a host-gateway mapping. For local Python runs, export
+`OLLAMA_URL` in the process environment; its default is
+`http://127.0.0.1:11434`.
+
+The image includes source code and sample business data. `.env`, Git history,
+local indexes, and caches are excluded from the build context. API credentials
+are supplied at runtime by Compose. The container starts with a fresh database
+volume; it does not copy your existing host index.
+
+Stop the optional background service while preserving its volumes:
+
+```bash
+docker compose --profile rag down
+```
 
 ## Build the knowledge index
 

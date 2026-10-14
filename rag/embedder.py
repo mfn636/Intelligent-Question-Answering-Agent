@@ -4,6 +4,7 @@ rag/embedder.py
 文本 → 向量：调用 Ollama /api/embed（bge-m3，1024 维），带批处理、重试与超时。
 """
 
+import os
 import time
 
 import requests
@@ -14,9 +15,10 @@ EMBED_DIM = 1024
 
 
 class Embedder:
-    def __init__(self, base_url: str = OLLAMA_URL, model: str = EMBED_MODEL,
+    def __init__(self, base_url: str | None = None, model: str = EMBED_MODEL,
                  timeout: int = 60, retries: int = 3, batch_size: int = 32):
-        self.base_url = base_url.rstrip("/")
+        # 显式注入优先；容器通过环境变量访问 Ollama，本地仍默认使用回环地址。
+        self.base_url = (base_url or os.getenv("OLLAMA_URL") or OLLAMA_URL).rstrip("/")
         self.model = model
         self.timeout = timeout
         self.retries = retries
