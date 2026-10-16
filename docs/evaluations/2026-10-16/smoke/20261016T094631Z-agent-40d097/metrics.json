@@ -1,0 +1,643 @@
+{
+  "pricing": null,
+  "groups": {
+    "routed/dev/fault": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 2,
+        "started": 2,
+        "completed": 2,
+        "pending_review": 2
+      },
+      "execution_status": {
+        "completed": 2
+      },
+      "scoring_status": {
+        "needs_review": 2
+      },
+      "tool_plan_coverage": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "failure_stages": {
+        "execution": 1
+      },
+      "workflow_requests": 0,
+      "summary_coverage": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 2,
+        "task_p50": 3981.600850005634,
+        "task_p95": 4030.985425011022,
+        "turn_n": 2,
+        "turn_p50": 3981.600850005634,
+        "turn_p95": 4030.985425011022
+      },
+      "usage": {
+        "llm_calls": 6,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 10849,
+        "completion_tokens": 520,
+        "cached_tokens": 9344,
+        "total_tokens": 11369,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 6,
+          "known_tokens": 11369
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "routed/dev/fault/fault": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 2,
+        "started": 2,
+        "completed": 2,
+        "pending_review": 2
+      },
+      "execution_status": {
+        "completed": 2
+      },
+      "scoring_status": {
+        "needs_review": 2
+      },
+      "tool_plan_coverage": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "failure_stages": {
+        "execution": 1
+      },
+      "workflow_requests": 0,
+      "summary_coverage": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 3,
+        "denominator": 3,
+        "rate": 1.0
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 2,
+        "task_p50": 3981.600850005634,
+        "task_p95": 4030.985425011022,
+        "turn_n": 2,
+        "turn_p50": 3981.600850005634,
+        "turn_p95": 4030.985425011022
+      },
+      "usage": {
+        "llm_calls": 6,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 10849,
+        "completion_tokens": 520,
+        "cached_tokens": 9344,
+        "total_tokens": 11369,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 6,
+          "known_tokens": 11369
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "react/dev/fault": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 2,
+        "started": 2,
+        "completed": 2,
+        "pending_review": 2
+      },
+      "execution_status": {
+        "completed": 2
+      },
+      "scoring_status": {
+        "needs_review": 2
+      },
+      "tool_plan_coverage": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "failure_stages": {
+        "execution": 2
+      },
+      "workflow_requests": 0,
+      "summary_coverage": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 4,
+        "denominator": 4,
+        "rate": 1.0
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 2,
+        "task_p50": 4603.726250003092,
+        "task_p95": 4857.02346500475,
+        "turn_n": 2,
+        "turn_p50": 4603.726250003092,
+        "turn_p95": 4857.02346500475
+      },
+      "usage": {
+        "llm_calls": 6,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 10987,
+        "completion_tokens": 678,
+        "cached_tokens": 9472,
+        "total_tokens": 11665,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 6,
+          "known_tokens": 11665
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "react/dev/fault/fault": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 2,
+        "started": 2,
+        "completed": 2,
+        "pending_review": 2
+      },
+      "execution_status": {
+        "completed": 2
+      },
+      "scoring_status": {
+        "needs_review": 2
+      },
+      "tool_plan_coverage": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "failure_stages": {
+        "execution": 2
+      },
+      "workflow_requests": 0,
+      "summary_coverage": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 4,
+        "denominator": 4,
+        "rate": 1.0
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 2,
+        "task_p50": 4603.726250003092,
+        "task_p95": 4857.02346500475,
+        "turn_n": 2,
+        "turn_p50": 4603.726250003092,
+        "turn_p95": 4857.02346500475
+      },
+      "usage": {
+        "llm_calls": 6,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 10987,
+        "completion_tokens": 678,
+        "cached_tokens": 9472,
+        "total_tokens": 11665,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 6,
+          "known_tokens": 11665
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    }
+  },
+  "pairs": [
+    {
+      "case_id": "fault-01",
+      "repeat": 1,
+      "both_completed": true,
+      "llm_calls_delta_routed_minus_react": 0,
+      "known_tokens_delta": -250,
+      "elapsed_ms_delta": -958.4385000052862,
+      "quality_change": "pending_review"
+    },
+    {
+      "case_id": "fault-03",
+      "repeat": 1,
+      "both_completed": true,
+      "llm_calls_delta_routed_minus_react": 0,
+      "known_tokens_delta": -46,
+      "elapsed_ms_delta": -285.81229998962954,
+      "quality_change": "pending_review"
+    }
+  ],
+  "cases": [
+    {
+      "key": "fault-01--routed--1",
+      "case_id": "fault-01",
+      "variant": "routed",
+      "repeat": 1,
+      "split": "dev",
+      "category": "fault",
+      "fault": true,
+      "status": "completed",
+      "worker_elapsed_ms": 4156.0,
+      "score": {
+        "decision": "needs_review",
+        "task_success": null,
+        "subgoals": [],
+        "route_checks": [
+          true
+        ],
+        "tool_plans": [
+          true
+        ],
+        "unnecessary_tools": [],
+        "natural_argument_count": 1,
+        "natural_arguments_valid": 1,
+        "injected_requests": 1,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": true,
+        "failure_stages": [],
+        "workflow_requests": 0,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 5472,
+        "completion_tokens": 277,
+        "cached_tokens": 4736,
+        "total_tokens": 5749,
+        "llm_calls": 3,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {
+          "executor": {
+            "calls": 3,
+            "known_tokens": 5749
+          }
+        },
+        "models": [
+          "deepseek-v4-flash"
+        ]
+      },
+      "minimum_summaries": 0,
+      "turn_elapsed_ms": [
+        3926.7290999996476
+      ],
+      "task_elapsed_ms": 3926.7290999996476,
+      "known_cost": null
+    },
+    {
+      "key": "fault-01--react--1",
+      "case_id": "fault-01",
+      "variant": "react",
+      "repeat": 1,
+      "split": "dev",
+      "category": "fault",
+      "fault": true,
+      "status": "completed",
+      "worker_elapsed_ms": 5110.0,
+      "score": {
+        "decision": "needs_review",
+        "task_success": null,
+        "subgoals": [],
+        "route_checks": [],
+        "tool_plans": [
+          true
+        ],
+        "unnecessary_tools": [],
+        "natural_argument_count": 2,
+        "natural_arguments_valid": 2,
+        "injected_requests": 1,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": true,
+        "failure_stages": [
+          "execution"
+        ],
+        "workflow_requests": 0,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 5606,
+        "completion_tokens": 393,
+        "cached_tokens": 4864,
+        "total_tokens": 5999,
+        "llm_calls": 3,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {
+          "executor": {
+            "calls": 3,
+            "known_tokens": 5999
+          }
+        },
+        "models": [
+          "deepseek-v4-flash"
+        ]
+      },
+      "minimum_summaries": 0,
+      "turn_elapsed_ms": [
+        4885.167600004934
+      ],
+      "task_elapsed_ms": 4885.167600004934,
+      "known_cost": null
+    },
+    {
+      "key": "fault-03--react--1",
+      "case_id": "fault-03",
+      "variant": "react",
+      "repeat": 1,
+      "split": "dev",
+      "category": "fault",
+      "fault": true,
+      "status": "completed",
+      "worker_elapsed_ms": 4547.0,
+      "score": {
+        "decision": "needs_review",
+        "task_success": null,
+        "subgoals": [],
+        "route_checks": [],
+        "tool_plans": [
+          true
+        ],
+        "unnecessary_tools": [],
+        "natural_argument_count": 2,
+        "natural_arguments_valid": 2,
+        "injected_requests": 0,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": true,
+        "failure_stages": [
+          "execution"
+        ],
+        "workflow_requests": 0,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 5381,
+        "completion_tokens": 285,
+        "cached_tokens": 4608,
+        "total_tokens": 5666,
+        "llm_calls": 3,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {
+          "executor": {
+            "calls": 3,
+            "known_tokens": 5666
+          }
+        },
+        "models": [
+          "deepseek-v4-flash"
+        ]
+      },
+      "minimum_summaries": 0,
+      "turn_elapsed_ms": [
+        4322.28490000125
+      ],
+      "task_elapsed_ms": 4322.28490000125,
+      "known_cost": null
+    },
+    {
+      "key": "fault-03--routed--1",
+      "case_id": "fault-03",
+      "variant": "routed",
+      "repeat": 1,
+      "split": "dev",
+      "category": "fault",
+      "fault": true,
+      "status": "completed",
+      "worker_elapsed_ms": 4250.0,
+      "score": {
+        "decision": "needs_review",
+        "task_success": null,
+        "subgoals": [],
+        "route_checks": [
+          true
+        ],
+        "tool_plans": [
+          true
+        ],
+        "unnecessary_tools": [],
+        "natural_argument_count": 2,
+        "natural_arguments_valid": 2,
+        "injected_requests": 0,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": true,
+        "failure_stages": [
+          "execution"
+        ],
+        "workflow_requests": 0,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 5377,
+        "completion_tokens": 243,
+        "cached_tokens": 4608,
+        "total_tokens": 5620,
+        "llm_calls": 3,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {
+          "executor": {
+            "calls": 3,
+            "known_tokens": 5620
+          }
+        },
+        "models": [
+          "deepseek-v4-flash"
+        ]
+      },
+      "minimum_summaries": 0,
+      "turn_elapsed_ms": [
+        4036.4726000116207
+      ],
+      "task_elapsed_ms": 4036.4726000116207,
+      "known_cost": null
+    }
+  ],
+  "repeat_stability": {
+    "fault-01/routed": {
+      "outcomes": [
+        null
+      ],
+      "all_passed": null
+    },
+    "fault-01/react": {
+      "outcomes": [
+        null
+      ],
+      "all_passed": null
+    },
+    "fault-03/react": {
+      "outcomes": [
+        null
+      ],
+      "all_passed": null
+    },
+    "fault-03/routed": {
+      "outcomes": [
+        null
+      ],
+      "all_passed": null
+    }
+  }
+}

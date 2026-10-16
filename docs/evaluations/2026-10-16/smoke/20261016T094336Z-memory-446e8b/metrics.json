@@ -1,0 +1,41 @@
+{
+  "full": {
+    "correct": 24,
+    "scored_fields": 24,
+    "planned_fields": 24,
+    "accuracy_scored": 1.0,
+    "unknown_fabricated": 0,
+    "unknown_expected_scored": 6,
+    "old_values_retained": 0,
+    "summary_failures": 0,
+    "calls": 3,
+    "known_tokens": 3212,
+    "unknown_usage_calls": 0
+  },
+  "recent10": {
+    "correct": 9,
+    "scored_fields": 24,
+    "planned_fields": 24,
+    "accuracy_scored": 0.375,
+    "unknown_fabricated": 0,
+    "unknown_expected_scored": 6,
+    "old_values_retained": 0,
+    "summary_failures": 0,
+    "calls": 3,
+    "known_tokens": 1364,
+    "unknown_usage_calls": 0
+  },
+  "summary": {
+    "correct": 21,
+    "scored_fields": 24,
+    "planned_fields": 24,
+    "accuracy_scored": 0.875,
+    "unknown_fabricated": 0,
+    "unknown_expected_scored": 6,
+    "old_values_retained": 0,
+    "summary_failures": 0,
+    "calls": 6,
+    "known_tokens": 5446,
+    "unknown_usage_calls": 0
+  }
+}

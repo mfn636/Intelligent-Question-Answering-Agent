@@ -1,0 +1,2 @@
+# Keep published evidence byte-stable across Windows and Unix checkouts.
+docs/evaluations/** text eol=lf

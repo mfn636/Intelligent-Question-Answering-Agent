@@ -1,0 +1,32 @@
+{
+  "version": "agent-v1-draft",
+  "dataset_sha256": "dfe5d4b56fe64b4759cd1f11a11fcd5ebbe1a0d6c53d8e783f1a1d31268faa39",
+  "authorship": "Agent-authored synthetic scenarios derived from bundled fixtures; not independently human-reviewed.",
+  "status": "Draft development material. Acceptance split is provisional, not an independently frozen holdout.",
+  "human_review": {
+    "reviewer": null,
+    "date": null,
+    "whole_corpus_no_answer_audit": false
+  },
+  "counts": {
+    "social": 10,
+    "single_product": 20,
+    "context": 20,
+    "multi_tool": 15,
+    "knowledge": 20,
+    "fault": 15
+  },
+  "splits": {
+    "dev": 60,
+    "acceptance": 40
+  },
+  "pilot_count": 30,
+  "sources": {
+    "data/products.json": "3019bd8f28ddec1e61dc6e3b2eceaca5f9d98dec1ecb03271d2233992b7b196d",
+    "data/inventory.json": "d56713c353242720776c8817748a769765cf22e1cc6eb0e155e79ea6a7c18f8a",
+    "data/faq.json": "7afbb820c06d180fa1ba097cf54eac252fcdedea795462942160735204624d96",
+    "data/guides.json": "e6343a6b3a34894c45e78007d005d6e33c0d4938558b4dd11ce2a03237ce9ad9"
+  },
+  "label_digest": "bf53a38455947fe5d07e3f5354af7300942ff551b21db3821321aeeb923b1f7d",
+  "hash_format": "sha256-lf"
+}

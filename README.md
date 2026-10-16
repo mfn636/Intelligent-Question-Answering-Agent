@@ -137,9 +137,45 @@ python -m unittest discover -s tests -v
 
 The tests cover routing boundaries, fixed workflow validation, tool-provider wiring, lazy resource initialization, conversation isolation, and error handling. Web integration tests also cover browser isolation, live state observation, request deduplication, execution queuing, and preservation of the display transcript after memory compaction.
 
+The current offline regression suite contains 60 tests, including evaluation-integrity checks and fixture validation across Windows/Unix line endings.
+
 ## Evaluation notes
 
-The repository includes the source data and documentation for the retrieval evaluation. Historical reports distinguish the original mixed product/knowledge corpus from the current knowledge-only RAG scope. Reported reranking numbers should be treated as experiment records and checked against the exact candidate count, reranker, labels, and execution logs before being used as a current benchmark.
+The evaluation harness runs the real conversation entry point, records model/tool/retrieval events, and compares the current router against an all-ReAct baseline. It includes 100 **draft synthetic scenarios**, with a 30-scenario pilot; labels and the provisional acceptance split still require independent human review.
+
+```bash
+# Validate draft scenarios and fixture fingerprints without model calls
+python -m eval.run_agent --validate-only
+
+# A small paired run using the configured model and real local tools
+python -m eval.run_agent --rag skip --ids single_product-01 context-02 --variants routed react --max-calls 12 --max-tokens 20000
+
+# Knowledge-only retrieval ablation; reranking is explicitly enabled
+python -m eval.run_retrieval --limit 5 --reranker llm
+
+# Fixed-transcript comparison: full history, recent 10 messages, incremental summary
+python -m eval.run_memory --limit 1
+```
+
+Each run writes raw evidence, configuration fingerprints, metrics and a Markdown report under `eval/results/`. Execution completion is separate from task correctness: semantic judgments remain pending until reviewed. Failed calls with unavailable usage are reported as unknown cost. Isolated workers enforce time limits, and call/token budgets bound subsequent requests. Missing retrieval dependencies are reported as unavailable rather than scored as zero-quality retrieval.
+
+See [the evaluation guide](docs/EVALUATION.md) for review import, budgets, cost accounting, full runs and limitations. Historical retrieval reports remain historical: the current RAG evaluation uses the 190 knowledge queries from the original 270-query set, and verifies rerank score coverage before treating a rerank as successful.
+
+### Measured retrieval baseline — October 16, 2026
+
+All **190 knowledge queries** completed against the real Qdrant index and Ollama BGE-M3 service; all 190 DeepSeek reranking responses passed score-coverage validation. Product queries are excluded because products are now served by local business tools.
+
+| Configuration | Hit@1 | Hit@5 | Hit@20 | MRR@5 | Mean retrieval latency |
+| --- | ---: | ---: | ---: | ---: | ---: |
+| Vector | 77.89% | 98.42% | 100% | 86.49% | 42.60 ms |
+| Vector + BM25, RRF | 77.89% | 97.37% | 100% | 86.04% | 49.81 ms |
+| Hybrid + Top-20 LLM reranking | **83.68%** | **98.95%** | 100% | **90.08%** | 1,559.36 ms |
+
+Reranking improved Hit@1 by **5.79 percentage points** over vector search, at an average additional **1.51 seconds** over hybrid retrieval. The reranking experiment used **190 model calls and 431,480 tokens**. Hybrid retrieval alone did not improve overall Hit@1 and reduced Hit@5 on this set; FAQ and long-document results moved in different directions.
+
+This is one run on a known development set with one designated target document per query. Hit@K measures target-document retrieval, not final-answer correctness or exhaustive recall. Local serial timings are not a concurrency SLA. The default Agent still uses hybrid retrieval **without reranking**; this experiment does not change that default. These results are not directly comparable with the historical 270-query experiment.
+
+The [full benchmark report](docs/RAG_EVALUATION_2026-10-16.md) includes subgroup results, regressions, uncertainty and limitations. The [versioned evidence bundle](docs/evaluations/2026-10-16/README.md) preserves rankings, raw reranker scores, usage and fingerprints, with an offline verifier. See [evaluation findings and follow-up experiments](docs/EVALUATION_FINDINGS_2026-10-16.md) for reusable lessons and the remaining work.
 
 ## Project status
 

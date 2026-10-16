@@ -1,0 +1,97 @@
+{
+  "status": {
+    "status": "completed",
+    "worker_elapsed_ms": 305704.0
+  },
+  "planned": 190,
+  "completed": 190,
+  "service_quality": {
+    "vector": {
+      "n": 190,
+      "hit1": 0.7789473684210526,
+      "hit5": 0.9842105263157894,
+      "hit20": 1.0,
+      "mrr5": 0.8649122807017544
+    },
+    "hybrid": {
+      "n": 190,
+      "hit1": 0.7789473684210526,
+      "hit5": 0.9736842105263158,
+      "hit20": 1.0,
+      "mrr5": 0.860438596491228
+    },
+    "hybrid_rerank": {
+      "n": 190,
+      "hit1": 0.8368421052631579,
+      "hit5": 0.9894736842105263,
+      "hit20": 1.0,
+      "mrr5": 0.9007894736842106
+    }
+  },
+  "same_verified_subset": {
+    "vector": {
+      "n": 190,
+      "hit1": 0.7789473684210526,
+      "hit5": 0.9842105263157894,
+      "hit20": 1.0,
+      "mrr5": 0.8649122807017544
+    },
+    "hybrid": {
+      "n": 190,
+      "hit1": 0.7789473684210526,
+      "hit5": 0.9736842105263158,
+      "hit20": 1.0,
+      "mrr5": 0.860438596491228
+    },
+    "hybrid_rerank": {
+      "n": 190,
+      "hit1": 0.8368421052631579,
+      "hit5": 0.9894736842105263,
+      "hit20": 1.0,
+      "mrr5": 0.9007894736842106
+    }
+  },
+  "verified_reranks": 190,
+  "paired_gains": {
+    "vector_to_hybrid": {
+      "n": 190,
+      "hit1_pp": 0.0,
+      "hit5_pp": -1.0526315789473684,
+      "hit20_pp": 0.0,
+      "mrr5_pp": -0.4473684210526314
+    },
+    "hybrid_to_hybrid_rerank": {
+      "n": 190,
+      "hit1_pp": 5.7894736842105265,
+      "hit5_pp": 1.5789473684210527,
+      "hit20_pp": 0.0,
+      "mrr5_pp": 4.035087719298246
+    },
+    "vector_to_hybrid_rerank": {
+      "n": 190,
+      "hit1_pp": 5.7894736842105265,
+      "hit5_pp": 0.5263157894736842,
+      "hit20_pp": 0.0,
+      "mrr5_pp": 3.5877192982456143
+    }
+  },
+  "usage": {
+    "prompt_tokens": 369508,
+    "completion_tokens": 61972,
+    "cached_tokens": 7936,
+    "total_tokens": 431480,
+    "llm_calls": 190,
+    "failed_llm_calls": 0,
+    "injected_llm_calls": 0,
+    "unknown_usage_calls": 0,
+    "stages": {
+      "rerank": {
+        "calls": 190,
+        "known_tokens": 431480
+      }
+    },
+    "models": [
+      "deepseek-v4-flash"
+    ]
+  }
+}

@@ -1,0 +1,8 @@
+{"key": "single_product-01--routed--1", "case_id": "single_product-01", "variant": "routed", "repeat": 1, "split": "dev", "category": "single_product", "fault": false, "status": "completed", "worker_elapsed_ms": 156.0}
+{"key": "single_product-01--react--1", "case_id": "single_product-01", "variant": "react", "repeat": 1, "split": "dev", "category": "single_product", "fault": false, "status": "completed", "worker_elapsed_ms": 2750.0}
+{"key": "context-02--react--1", "case_id": "context-02", "variant": "react", "repeat": 1, "split": "dev", "category": "context", "fault": false, "status": "completed", "worker_elapsed_ms": 4297.0}
+{"key": "context-02--routed--1", "case_id": "context-02", "variant": "routed", "repeat": 1, "split": "dev", "category": "context", "fault": false, "status": "completed", "worker_elapsed_ms": 156.0}
+{"key": "multi_tool-01--routed--1", "case_id": "multi_tool-01", "variant": "routed", "repeat": 1, "split": "dev", "category": "multi_tool", "fault": false, "status": "completed", "worker_elapsed_ms": 4594.0}
+{"key": "multi_tool-01--react--1", "case_id": "multi_tool-01", "variant": "react", "repeat": 1, "split": "dev", "category": "multi_tool", "fault": false, "status": "completed", "worker_elapsed_ms": 4360.0}
+{"key": "fault-01--react--1", "case_id": "fault-01", "variant": "react", "repeat": 1, "split": "dev", "category": "fault", "fault": true, "status": "budget_exhausted", "error": {"type": "BudgetExceeded", "message": "Model call/token budget exhausted before next request"}, "worker_elapsed_ms": 1921.0}
+{"key": "fault-01--routed--1", "case_id": "fault-01", "variant": "routed", "repeat": 1, "split": "dev", "category": "fault", "fault": true, "status": "skipped", "reason": "global_budget"}

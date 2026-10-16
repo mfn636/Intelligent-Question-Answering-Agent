@@ -1,0 +1,4 @@
+{"key": "fault-01--routed--1", "case_id": "fault-01", "variant": "routed", "repeat": 1, "split": "dev", "category": "fault", "fault": true, "status": "completed", "worker_elapsed_ms": 4156.0}
+{"key": "fault-01--react--1", "case_id": "fault-01", "variant": "react", "repeat": 1, "split": "dev", "category": "fault", "fault": true, "status": "completed", "worker_elapsed_ms": 5110.0}
+{"key": "fault-03--react--1", "case_id": "fault-03", "variant": "react", "repeat": 1, "split": "dev", "category": "fault", "fault": true, "status": "completed", "worker_elapsed_ms": 4547.0}
+{"key": "fault-03--routed--1", "case_id": "fault-03", "variant": "routed", "repeat": 1, "split": "dev", "category": "fault", "fault": true, "status": "completed", "worker_elapsed_ms": 4250.0}

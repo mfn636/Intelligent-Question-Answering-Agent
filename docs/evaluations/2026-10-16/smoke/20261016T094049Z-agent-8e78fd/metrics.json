@@ -1,0 +1,1449 @@
+{
+  "pricing": null,
+  "groups": {
+    "routed/dev/normal": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 3,
+        "started": 3,
+        "completed": 3,
+        "pending_review": 3
+      },
+      "execution_status": {
+        "completed": 3
+      },
+      "scoring_status": {
+        "needs_review": 3
+      },
+      "tool_plan_coverage": {
+        "numerator": 3,
+        "denominator": 4,
+        "rate": 0.75
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 4,
+        "denominator": 4,
+        "rate": 1.0
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 3,
+        "task_p50": 1.7476000357419252,
+        "task_p95": 3914.9020600016224,
+        "turn_n": 4,
+        "turn_p50": 1.139800006058067,
+        "turn_p95": 3697.422314996946
+      },
+      "usage": {
+        "llm_calls": 3,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 8685,
+        "completion_tokens": 374,
+        "cached_tokens": 6272,
+        "total_tokens": 9059,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 3,
+          "known_tokens": 9059
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "routed/dev/normal/single_product": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 1,
+        "started": 1,
+        "completed": 1,
+        "pending_review": 1
+      },
+      "execution_status": {
+        "completed": 1
+      },
+      "scoring_status": {
+        "needs_review": 1
+      },
+      "tool_plan_coverage": {
+        "numerator": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 1,
+        "task_p50": 1.1990999919362366,
+        "task_p95": 1.1990999919362366,
+        "turn_n": 1,
+        "turn_p50": 1.1990999919362366,
+        "turn_p95": 1.1990999919362366
+      },
+      "usage": {
+        "llm_calls": 0,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cached_tokens": 0,
+        "total_tokens": 0,
+        "unknown_usage_calls": 0
+      },
+      "stages": {},
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "react/dev/normal": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 3,
+        "started": 3,
+        "completed": 3,
+        "pending_review": 3
+      },
+      "execution_status": {
+        "completed": 3
+      },
+      "scoring_status": {
+        "needs_review": 3
+      },
+      "tool_plan_coverage": {
+        "numerator": 4,
+        "denominator": 4,
+        "rate": 1.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 5,
+        "denominator": 5,
+        "rate": 1.0
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 3,
+        "task_p50": 4075.6179000018165,
+        "task_p95": 4137.669930019183,
+        "turn_n": 4,
+        "turn_p50": 2553.1173999916064,
+        "turn_p95": 3910.844020018703
+      },
+      "usage": {
+        "llm_calls": 9,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 19191,
+        "completion_tokens": 763,
+        "cached_tokens": 15360,
+        "total_tokens": 19954,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 9,
+          "known_tokens": 19954
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "react/dev/normal/single_product": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 1,
+        "started": 1,
+        "completed": 1,
+        "pending_review": 1
+      },
+      "execution_status": {
+        "completed": 1
+      },
+      "scoring_status": {
+        "needs_review": 1
+      },
+      "tool_plan_coverage": {
+        "numerator": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 1,
+        "task_p50": 2519.8073999781627,
+        "task_p95": 2519.8073999781627,
+        "turn_n": 1,
+        "turn_p50": 2519.8073999781627,
+        "turn_p95": 2519.8073999781627
+      },
+      "usage": {
+        "llm_calls": 2,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 3538,
+        "completion_tokens": 130,
+        "cached_tokens": 3072,
+        "total_tokens": 3668,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 2,
+          "known_tokens": 3668
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "react/dev/normal/context": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 1,
+        "started": 1,
+        "completed": 1,
+        "pending_review": 1
+      },
+      "execution_status": {
+        "completed": 1
+      },
+      "scoring_status": {
+        "needs_review": 1
+      },
+      "tool_plan_coverage": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 1,
+        "task_p50": 4075.6179000018165,
+        "task_p95": 4075.6179000018165,
+        "turn_n": 2,
+        "turn_p50": 2037.8089500009082,
+        "turn_p95": 2531.565555004636
+      },
+      "usage": {
+        "llm_calls": 4,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 6954,
+        "completion_tokens": 223,
+        "cached_tokens": 6016,
+        "total_tokens": 7177,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 4,
+          "known_tokens": 7177
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "routed/dev/normal/context": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 1,
+        "started": 1,
+        "completed": 1,
+        "pending_review": 1
+      },
+      "execution_status": {
+        "completed": 1
+      },
+      "scoring_status": {
+        "needs_review": 1
+      },
+      "tool_plan_coverage": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 1,
+        "task_p50": 1.7476000357419252,
+        "task_p95": 1.7476000357419252,
+        "turn_n": 2,
+        "turn_p50": 0.8738000178709626,
+        "turn_p95": 1.059830019949004
+      },
+      "usage": {
+        "llm_calls": 0,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cached_tokens": 0,
+        "total_tokens": 0,
+        "unknown_usage_calls": 0
+      },
+      "stages": {},
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "routed/dev/normal/multi_tool": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 1,
+        "started": 1,
+        "completed": 1,
+        "pending_review": 1
+      },
+      "execution_status": {
+        "completed": 1
+      },
+      "scoring_status": {
+        "needs_review": 1
+      },
+      "tool_plan_coverage": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 1,
+        "task_p50": 4349.696999997832,
+        "task_p95": 4349.696999997832,
+        "turn_n": 1,
+        "turn_p50": 4349.696999997832,
+        "turn_p95": 4349.696999997832
+      },
+      "usage": {
+        "llm_calls": 3,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 8685,
+        "completion_tokens": 374,
+        "cached_tokens": 6272,
+        "total_tokens": 9059,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 3,
+          "known_tokens": 9059
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "react/dev/normal/multi_tool": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 1,
+        "started": 1,
+        "completed": 1,
+        "pending_review": 1
+      },
+      "execution_status": {
+        "completed": 1
+      },
+      "scoring_status": {
+        "needs_review": 1
+      },
+      "tool_plan_coverage": {
+        "numerator": 1,
+        "denominator": 1,
+        "rate": 1.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 2,
+        "denominator": 2,
+        "rate": 1.0
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 1,
+        "task_p50": 4144.564600021113,
+        "task_p95": 4144.564600021113,
+        "turn_n": 1,
+        "turn_p50": 4144.564600021113,
+        "turn_p95": 4144.564600021113
+      },
+      "usage": {
+        "llm_calls": 3,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 8699,
+        "completion_tokens": 410,
+        "cached_tokens": 6272,
+        "total_tokens": 9109,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 3,
+          "known_tokens": 9109
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "react/dev/fault": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0,
+        "planned": 1,
+        "started": 1,
+        "completed": 0,
+        "pending_review": 0
+      },
+      "execution_status": {
+        "budget_exhausted": 1
+      },
+      "scoring_status": {
+        "failed_execution": 1
+      },
+      "tool_plan_coverage": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 1,
+        "task_p50": 1688.3376000041608,
+        "task_p95": 1688.3376000041608,
+        "turn_n": 1,
+        "turn_p50": 1688.3376000041608,
+        "turn_p95": 1688.3376000041608
+      },
+      "usage": {
+        "llm_calls": 1,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 1619,
+        "completion_tokens": 69,
+        "cached_tokens": 1408,
+        "total_tokens": 1688,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 1,
+          "known_tokens": 1688
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "react/dev/fault/fault": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0,
+        "planned": 1,
+        "started": 1,
+        "completed": 0,
+        "pending_review": 0
+      },
+      "execution_status": {
+        "budget_exhausted": 1
+      },
+      "scoring_status": {
+        "failed_execution": 1
+      },
+      "tool_plan_coverage": {
+        "numerator": 0,
+        "denominator": 1,
+        "rate": 0.0
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 1,
+        "task_p50": 1688.3376000041608,
+        "task_p95": 1688.3376000041608,
+        "turn_n": 1,
+        "turn_p50": 1688.3376000041608,
+        "turn_p95": 1688.3376000041608
+      },
+      "usage": {
+        "llm_calls": 1,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 1619,
+        "completion_tokens": 69,
+        "cached_tokens": 1408,
+        "total_tokens": 1688,
+        "unknown_usage_calls": 0
+      },
+      "stages": {
+        "executor": {
+          "calls": 1,
+          "known_tokens": 1688
+        }
+      },
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "routed/dev/fault": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 1,
+        "started": 0,
+        "completed": 0,
+        "pending_review": 0
+      },
+      "execution_status": {
+        "skipped": 1
+      },
+      "scoring_status": {
+        "skipped": 1
+      },
+      "tool_plan_coverage": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 0,
+        "task_p50": null,
+        "task_p95": null,
+        "turn_n": 0,
+        "turn_p50": null,
+        "turn_p95": null
+      },
+      "usage": {
+        "llm_calls": 0,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cached_tokens": 0,
+        "total_tokens": 0,
+        "unknown_usage_calls": 0
+      },
+      "stages": {},
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    },
+    "routed/dev/fault/fault": {
+      "task_success": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null,
+        "planned": 1,
+        "started": 0,
+        "completed": 0,
+        "pending_review": 0
+      },
+      "execution_status": {
+        "skipped": 1
+      },
+      "scoring_status": {
+        "skipped": 1
+      },
+      "tool_plan_coverage": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "unnecessary_tool_rate": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "route_expectation": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "subgoal_completion": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "grounded": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "argument_semantics": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "natural_argument_validity": {
+        "numerator": 0,
+        "denominator": 0,
+        "rate": null
+      },
+      "latency_ms": {
+        "method": "linear interpolation (n-1)*q",
+        "task_n": 0,
+        "task_p50": null,
+        "task_p95": null,
+        "turn_n": 0,
+        "turn_p50": null,
+        "turn_p95": null
+      },
+      "usage": {
+        "llm_calls": 0,
+        "failed_llm_calls": 0,
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cached_tokens": 0,
+        "total_tokens": 0,
+        "unknown_usage_calls": 0
+      },
+      "stages": {},
+      "cost": {
+        "known_amount": null,
+        "unknown_usage_calls": 0
+      }
+    }
+  },
+  "pairs": [
+    {
+      "case_id": "single_product-01",
+      "repeat": 1,
+      "both_completed": true,
+      "llm_calls_delta_routed_minus_react": -2,
+      "known_tokens_delta": -3668,
+      "elapsed_ms_delta": -2518.6082999862265,
+      "quality_change": "pending_review"
+    },
+    {
+      "case_id": "context-02",
+      "repeat": 1,
+      "both_completed": true,
+      "llm_calls_delta_routed_minus_react": -4,
+      "known_tokens_delta": -7177,
+      "elapsed_ms_delta": -4073.8702999660745,
+      "quality_change": "pending_review"
+    },
+    {
+      "case_id": "multi_tool-01",
+      "repeat": 1,
+      "both_completed": true,
+      "llm_calls_delta_routed_minus_react": 0,
+      "known_tokens_delta": -50,
+      "elapsed_ms_delta": 205.13239997671917,
+      "quality_change": "pending_review"
+    },
+    {
+      "case_id": "fault-01",
+      "repeat": 1,
+      "both_completed": false,
+      "llm_calls_delta_routed_minus_react": null,
+      "known_tokens_delta": null,
+      "elapsed_ms_delta": null,
+      "quality_change": "pending_review"
+    }
+  ],
+  "cases": [
+    {
+      "key": "single_product-01--routed--1",
+      "case_id": "single_product-01",
+      "variant": "routed",
+      "repeat": 1,
+      "split": "dev",
+      "category": "single_product",
+      "fault": false,
+      "status": "completed",
+      "worker_elapsed_ms": 156.0,
+      "score": {
+        "decision": "needs_review",
+        "task_success": null,
+        "subgoals": [],
+        "route_checks": [
+          true
+        ],
+        "tool_plans": [
+          true
+        ],
+        "unnecessary_tools": [],
+        "natural_argument_count": 0,
+        "natural_arguments_valid": 0,
+        "injected_requests": 0,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": null,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cached_tokens": 0,
+        "total_tokens": 0,
+        "llm_calls": 0,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {},
+        "models": []
+      },
+      "turn_elapsed_ms": [
+        1.1990999919362366
+      ],
+      "task_elapsed_ms": 1.1990999919362366,
+      "known_cost": null
+    },
+    {
+      "key": "single_product-01--react--1",
+      "case_id": "single_product-01",
+      "variant": "react",
+      "repeat": 1,
+      "split": "dev",
+      "category": "single_product",
+      "fault": false,
+      "status": "completed",
+      "worker_elapsed_ms": 2750.0,
+      "score": {
+        "decision": "needs_review",
+        "task_success": null,
+        "subgoals": [],
+        "route_checks": [],
+        "tool_plans": [
+          true
+        ],
+        "unnecessary_tools": [],
+        "natural_argument_count": 1,
+        "natural_arguments_valid": 1,
+        "injected_requests": 0,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": null,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 3538,
+        "completion_tokens": 130,
+        "cached_tokens": 3072,
+        "total_tokens": 3668,
+        "llm_calls": 2,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {
+          "executor": {
+            "calls": 2,
+            "known_tokens": 3668
+          }
+        },
+        "models": [
+          "deepseek-v4-flash"
+        ]
+      },
+      "turn_elapsed_ms": [
+        2519.8073999781627
+      ],
+      "task_elapsed_ms": 2519.8073999781627,
+      "known_cost": null
+    },
+    {
+      "key": "context-02--react--1",
+      "case_id": "context-02",
+      "variant": "react",
+      "repeat": 1,
+      "split": "dev",
+      "category": "context",
+      "fault": false,
+      "status": "completed",
+      "worker_elapsed_ms": 4297.0,
+      "score": {
+        "decision": "needs_review",
+        "task_success": null,
+        "subgoals": [],
+        "route_checks": [],
+        "tool_plans": [
+          true,
+          true
+        ],
+        "unnecessary_tools": [],
+        "natural_argument_count": 2,
+        "natural_arguments_valid": 2,
+        "injected_requests": 0,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": null,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 6954,
+        "completion_tokens": 223,
+        "cached_tokens": 6016,
+        "total_tokens": 7177,
+        "llm_calls": 4,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {
+          "executor": {
+            "calls": 4,
+            "known_tokens": 7177
+          }
+        },
+        "models": [
+          "deepseek-v4-flash"
+        ]
+      },
+      "turn_elapsed_ms": [
+        2586.42740000505,
+        1489.1904999967664
+      ],
+      "task_elapsed_ms": 4075.6179000018165,
+      "known_cost": null
+    },
+    {
+      "key": "context-02--routed--1",
+      "case_id": "context-02",
+      "variant": "routed",
+      "repeat": 1,
+      "split": "dev",
+      "category": "context",
+      "fault": false,
+      "status": "completed",
+      "worker_elapsed_ms": 156.0,
+      "score": {
+        "decision": "needs_review",
+        "task_success": null,
+        "subgoals": [],
+        "route_checks": [
+          true,
+          true
+        ],
+        "tool_plans": [
+          true,
+          true
+        ],
+        "unnecessary_tools": [],
+        "natural_argument_count": 0,
+        "natural_arguments_valid": 0,
+        "injected_requests": 0,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": null,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cached_tokens": 0,
+        "total_tokens": 0,
+        "llm_calls": 0,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {},
+        "models": []
+      },
+      "turn_elapsed_ms": [
+        1.0805000201798975,
+        0.6671000155620277
+      ],
+      "task_elapsed_ms": 1.7476000357419252,
+      "known_cost": null
+    },
+    {
+      "key": "multi_tool-01--routed--1",
+      "case_id": "multi_tool-01",
+      "variant": "routed",
+      "repeat": 1,
+      "split": "dev",
+      "category": "multi_tool",
+      "fault": false,
+      "status": "completed",
+      "worker_elapsed_ms": 4594.0,
+      "score": {
+        "decision": "needs_review",
+        "task_success": null,
+        "subgoals": [],
+        "route_checks": [
+          true
+        ],
+        "tool_plans": [
+          false
+        ],
+        "unnecessary_tools": [],
+        "natural_argument_count": 2,
+        "natural_arguments_valid": 2,
+        "injected_requests": 0,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": null,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 8685,
+        "completion_tokens": 374,
+        "cached_tokens": 6272,
+        "total_tokens": 9059,
+        "llm_calls": 3,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {
+          "executor": {
+            "calls": 3,
+            "known_tokens": 9059
+          }
+        },
+        "models": [
+          "deepseek-v4-flash"
+        ]
+      },
+      "turn_elapsed_ms": [
+        4349.696999997832
+      ],
+      "task_elapsed_ms": 4349.696999997832,
+      "known_cost": null
+    },
+    {
+      "key": "multi_tool-01--react--1",
+      "case_id": "multi_tool-01",
+      "variant": "react",
+      "repeat": 1,
+      "split": "dev",
+      "category": "multi_tool",
+      "fault": false,
+      "status": "completed",
+      "worker_elapsed_ms": 4360.0,
+      "score": {
+        "decision": "needs_review",
+        "task_success": null,
+        "subgoals": [],
+        "route_checks": [],
+        "tool_plans": [
+          true
+        ],
+        "unnecessary_tools": [],
+        "natural_argument_count": 2,
+        "natural_arguments_valid": 2,
+        "injected_requests": 0,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": null,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 8699,
+        "completion_tokens": 410,
+        "cached_tokens": 6272,
+        "total_tokens": 9109,
+        "llm_calls": 3,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {
+          "executor": {
+            "calls": 3,
+            "known_tokens": 9109
+          }
+        },
+        "models": [
+          "deepseek-v4-flash"
+        ]
+      },
+      "turn_elapsed_ms": [
+        4144.564600021113
+      ],
+      "task_elapsed_ms": 4144.564600021113,
+      "known_cost": null
+    },
+    {
+      "key": "fault-01--react--1",
+      "case_id": "fault-01",
+      "variant": "react",
+      "repeat": 1,
+      "split": "dev",
+      "category": "fault",
+      "fault": true,
+      "status": "budget_exhausted",
+      "error": {
+        "type": "BudgetExceeded",
+        "message": "Model call/token budget exhausted before next request"
+      },
+      "worker_elapsed_ms": 1921.0,
+      "score": {
+        "decision": "failed_execution",
+        "task_success": false,
+        "subgoals": [],
+        "route_checks": [],
+        "tool_plans": [
+          false
+        ],
+        "unnecessary_tools": [],
+        "natural_argument_count": 0,
+        "natural_arguments_valid": 0,
+        "injected_requests": 1,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": true,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 1619,
+        "completion_tokens": 69,
+        "cached_tokens": 1408,
+        "total_tokens": 1688,
+        "llm_calls": 1,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {
+          "executor": {
+            "calls": 1,
+            "known_tokens": 1688
+          }
+        },
+        "models": [
+          "deepseek-v4-flash"
+        ]
+      },
+      "turn_elapsed_ms": [
+        1688.3376000041608
+      ],
+      "task_elapsed_ms": 1688.3376000041608,
+      "known_cost": null
+    },
+    {
+      "key": "fault-01--routed--1",
+      "case_id": "fault-01",
+      "variant": "routed",
+      "repeat": 1,
+      "split": "dev",
+      "category": "fault",
+      "fault": true,
+      "status": "skipped",
+      "reason": "global_budget",
+      "score": {
+        "decision": "skipped",
+        "task_success": null,
+        "subgoals": [],
+        "route_checks": [],
+        "tool_plans": [],
+        "unnecessary_tools": [],
+        "natural_argument_count": 0,
+        "natural_arguments_valid": 0,
+        "injected_requests": 0,
+        "successful_summaries": 0,
+        "summary_coverage": true,
+        "fault_exercised": false,
+        "grounded": null,
+        "argument_semantics_correct": null
+      },
+      "usage": {
+        "prompt_tokens": 0,
+        "completion_tokens": 0,
+        "cached_tokens": 0,
+        "total_tokens": 0,
+        "llm_calls": 0,
+        "failed_llm_calls": 0,
+        "injected_llm_calls": 0,
+        "unknown_usage_calls": 0,
+        "stages": {},
+        "models": []
+      },
+      "turn_elapsed_ms": [],
+      "task_elapsed_ms": 0,
+      "known_cost": null
+    }
+  ],
+  "repeat_stability": {
+    "single_product-01/routed": {
+      "outcomes": [
+        null
+      ],
+      "all_passed": null
+    },
+    "single_product-01/react": {
+      "outcomes": [
+        null
+      ],
+      "all_passed": null
+    },
+    "context-02/react": {
+      "outcomes": [
+        null
+      ],
+      "all_passed": null
+    },
+    "context-02/routed": {
+      "outcomes": [
+        null
+      ],
+      "all_passed": null
+    },
+    "multi_tool-01/routed": {
+      "outcomes": [
+        null
+      ],
+      "all_passed": null
+    },
+    "multi_tool-01/react": {
+      "outcomes": [
+        null
+      ],
+      "all_passed": null
+    },
+    "fault-01/react": {
+      "outcomes": [
+        false
+      ],
+      "all_passed": false
+    },
+    "fault-01/routed": {
+      "outcomes": [
+        null
+      ],
+      "all_passed": null
+    }
+  }
+}
