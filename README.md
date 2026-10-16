@@ -4,8 +4,18 @@ An e-commerce question-answering agent built with ReAct, tool calling, hybrid re
 
 The system handles product recommendations, product specifications, inventory questions, and customer-support knowledge queries. A lightweight intent router sends simple requests to deterministic replies or fixed workflows, while open-ended requests continue through the ReAct loop.
 
+## Workspace preview
+
+![Agent Studio showing a three-turn product conversation, conversation memory, live AgentState, and tool-call results](docs/images/web-workspace.png)
+
+A real session in the FastAPI workspace: an inventory lookup, a follow-up price query, and a model-generated laptop comparison using the bundled sample catalog. The inspector displays the session's actual memory and execution state. In this captured run, the comparison completed in two ReAct steps with two product-detail tool calls.
+
 ## Highlights
 
+- **FastAPI conversation workspace**
+  - A three-column interface with conversation management, chat, and a memory/state inspector.
+  - Live state polling, tool-call inspection, and per-turn token and latency reporting.
+  - Display history stays available after older Agent context is summarized.
 - **Intent routing and fixed workflows**
   - Direct replies for greetings, acknowledgements, and requests that need clarification.
   - Deterministic workflows for single-product inventory, price, and specification queries.
@@ -27,21 +37,19 @@ The system handles product recommendations, product specifications, inventory qu
 - **Dependency and lifecycle management**
   - The composition root owns shared LLM, tool, and retrieval resources.
   - The default LLM and RAG dependencies are initialized lazily when a request actually needs them.
-- **Docker packaging**
-  - A non-root CLI image and Docker Compose configuration with an optional Ollama service.
-  - Persistent volumes for model files and the knowledge index, with API credentials supplied at runtime.
 
 ## Architecture
 
 ```text
-Application
-  └── ConversationRunner
-        ├── IntentRouter
-        ├── ProductQueryWorkflows
-        └── ReActExecutor
-              └── LocalProvider
-                    ├── local product/inventory functions
-                    └── knowledge-search function
+CLI / FastAPI Web Workspace
+  └── Application
+        └── ConversationRunner
+              ├── IntentRouter
+              ├── ProductQueryWorkflows
+              └── ReActExecutor
+                    └── LocalProvider
+                          ├── local product/inventory functions
+                          └── knowledge-search function
 
 Knowledge search:
 LocalProvider → LazySearchService → RagSearchAdapter → Retriever
@@ -50,8 +58,6 @@ LocalProvider → LazySearchService → RagSearchAdapter → Retriever
 ```
 
 ## Requirements
-
-For local Python runs:
 
 - Python 3.11+
 - A DeepSeek-compatible chat API for normal Agent requests
@@ -65,9 +71,6 @@ python -m pip install -r requirements.txt
 ```
 
 Copy `.env.example` to `.env` and set `DEEPSEEK_API_KEY`. `LLM_MODEL` is optional.
-
-For containerized runs, follow [Run with Docker](#run-with-docker). A host Python
-installation is not required.
 
 ## Run the CLI
 
@@ -84,63 +87,35 @@ The default application loads local product and inventory data and exposes four 
 
 Product and inventory requests use local data. The Qdrant client and embedding service are initialized only when the knowledge-search tool is first used.
 
-## Run with Docker
+## Run the web workspace
 
-Install Docker with the Compose v2 plugin (Docker Desktop on Windows/macOS),
-copy `.env.example` to `.env`, and set `DEEPSEEK_API_KEY` for model-backed requests.
-The container runs the same interactive CLI; it does not expose an HTTP API.
-
-Build the image and open a conversation:
+The FastAPI workspace provides a three-column interface: a sidebar for conversations and future extensions, a chat panel, and an inspector for conversation memory and `AgentState`.
 
 ```bash
-docker compose build agent
-docker compose run --rm agent
+python -m uvicorn web.app:app --host 127.0.0.1 --port 8000
 ```
 
-Enter `exit` to close the conversation. Rule-matched greetings and fixed product
-queries do not require an API key. Knowledge retrieval additionally requires
-the RAG setup below.
+Open [http://127.0.0.1:8000](http://127.0.0.1:8000). The frontend is served by FastAPI and does not require Node.js or a separate build step.
 
-### Enable knowledge retrieval
+- Create, switch, and delete conversations. Each conversation has its own runner, history, and state; a browser cookie scopes access to its conversations.
+- Inspect the actual incremental summary, recent messages, routing decision, ReAct step count, tool arguments/results, model usage, and full state. The page polls during execution; the final answer appears when the turn completes.
+- Display history is kept separately from Agent memory, so summarizing older context does not remove chat bubbles.
+- The existing composition root supplies the real local tools and lazy RAG service. Greetings and queries such as `NB001 有货吗` work without model requests; open-ended requests require the configured model API.
+- Agent turns are queued across conversations because the current core shares lazy dependencies and a model usage log. Blocking execution runs outside the web event loop, keeping state and health endpoints responsive.
 
-Start the optional Ollama service, download BGE-M3, and build the knowledge index:
+This is a local development workspace. Conversations live in process memory and disappear on restart. Run one server worker; multiple workers would have separate session stores. Browser scoping is not account authentication. The existing CLI entry point remains available.
 
-```bash
-docker compose --profile rag up -d --wait ollama
-docker compose exec ollama ollama pull bge-m3
-docker compose run --rm agent python -m rag.ingest
-docker compose run --rm agent
-```
+Web code: `web/app.py` handles HTTP and resource lifecycle, `web/sessions.py` manages conversations and execution, and `web/static/` contains the interface. Interactive API documentation is available at `/docs`.
 
-The first model download and index build can take several minutes. The bundled
-Ollama service uses CPU by default and is reachable only on the Compose network;
-no host ports are published. Models are stored in the `ollama_models` volume and
-the local Qdrant database in `qdrant_data`. Subsequent conversations reuse both.
-Conversation history remains in memory and ends with the CLI process.
+To reproduce the conversation in the screenshot, send these questions in the same session:
 
-Ingestion rebuilds the knowledge collection. Exit any Agent process using the
-index before running ingestion: Qdrant local storage supports only one process
-accessing the same database directory. Multiple Agent containers cannot share
-this volume concurrently.
+| Query | Execution path | What it demonstrates |
+| --- | --- | --- |
+| `NB002 有货吗` | Fixed workflow | Reads the local inventory record through `check_inventory`. |
+| `它的价格` | Fixed workflow | Resolves the product reference from recent conversation history and calls `get_product_detail`. |
+| `比较一下 NB001 和 NB002，哪台更适合带去学校写代码？请用三句话回答。` | ReAct Agent | Fetches both product records and uses the configured model to compare their specifications. |
 
-To reuse an existing Ollama server instead of starting the bundled service, set
-`OLLAMA_URL` in `.env` to an address reachable from the container. On Docker
-Desktop, `http://host.docker.internal:11434` addresses the host machine; Ollama
-must accept connections from Docker. Linux users can use a reachable server
-address or configure a host-gateway mapping. For local Python runs, export
-`OLLAMA_URL` in the process environment; its default is
-`http://127.0.0.1:11434`.
-
-The image includes source code and sample business data. `.env`, Git history,
-local indexes, and caches are excluded from the build context. API credentials
-are supplied at runtime by Compose. The container starts with a fresh database
-volume; it does not copy your existing host index.
-
-Stop the optional background service while preserving its volumes:
-
-```bash
-docker compose --profile rag down
-```
+The first two requests do not call the model. The comparison requires `DEEPSEEK_API_KEY`; its wording and usage can vary between runs. These examples use sample product data, not a live retail inventory feed.
 
 ## Build the knowledge index
 
@@ -160,7 +135,7 @@ The test suite uses local data and model/service doubles; it does not require li
 python -m unittest discover -s tests -v
 ```
 
-The tests cover routing boundaries, fixed workflow validation, tool-provider wiring, lazy resource initialization, conversation isolation, and error handling.
+The tests cover routing boundaries, fixed workflow validation, tool-provider wiring, lazy resource initialization, conversation isolation, and error handling. Web integration tests also cover browser isolation, live state observation, request deduplication, execution queuing, and preservation of the display transcript after memory compaction.
 
 ## Evaluation notes
 
@@ -168,7 +143,7 @@ The repository includes the source data and documentation for the retrieval eval
 
 ## Project status
 
-The core Agent, local tool layer, intent routing, fixed workflows, conversation summarization, and default RAG tool wiring are implemented. RAG-side production hardening remains open, including atomic index replacement, strict embedding-response validation, BM25 cache invalidation, pagination for large collections, robust long-paragraph chunking, and retry/circuit-breaker policy for external dependencies.
+The core Agent, local tool layer, intent routing, fixed workflows, conversation summarization, default RAG tool wiring, and FastAPI web workspace are implemented. RAG-side production hardening remains open, including atomic index replacement, strict embedding-response validation, BM25 cache invalidation, pagination for large collections, robust long-paragraph chunking, and retry/circuit-breaker policy for external dependencies.
 
 ## License
 

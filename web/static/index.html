@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f9fc">
+  <title>Agent Studio · 对话工作台</title>
+  <link rel="icon" href="/static/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/static/styles.css">
+  <script src="/static/app.js" defer></script>
+</head>
+<body>
+  <svg class="icon-library" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+    <symbol id="i-spark" viewBox="0 0 24 24"><path d="m12 3 2.5 6.5L21 12l-6.5 2.5L12 21l-2.5-6.5L3 12l6.5-2.5Z"/><path d="m20 2 .6 1.4L22 4l-1.4.6L20 6l-.6-1.4L18 4l1.4-.6Z"/></symbol>
+    <symbol id="i-chat" viewBox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.4 8.4 0 0 1-3.8-.9L3 21l1.9-5.7a8.4 8.4 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.4 8.4 0 0 1 3.8-.9h.5a8.5 8.5 0 0 1 8 8Z"/></symbol>
+    <symbol id="i-plus" viewBox="0 0 24 24"><path d="M12 5v14M5 12h14"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path d="m6 12 6-6 6 6M12 6v13"/></symbol>
+    <symbol id="i-chevron" viewBox="0 0 24 24"><path d="m9 5 7 7-7 7"/></symbol>
+    <symbol id="i-memory" viewBox="0 0 24 24"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M8 3v4M16 3v4M8 11h8M8 15h5"/></symbol>
+    <symbol id="i-state" viewBox="0 0 24 24"><path d="M3 12h4l3-8 4 16 3-8h4"/></symbol>
+    <symbol id="i-tool" viewBox="0 0 24 24"><path d="M14.7 6.3a5 5 0 0 0-6.4 6.4L3 18a2.1 2.1 0 0 0 3 3l5.3-5.3a5 5 0 0 0 6.4-6.4l-3.2 3.2-3-3Z"/></symbol>
+    <symbol id="i-panel" viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="16" rx="3"/><path d="M15 4v16"/></symbol>
+    <symbol id="i-box" viewBox="0 0 24 24"><path d="m12 3 9 5-9 5-9-5 9-5ZM3 8v9l9 5 9-5V8M12 13v9M7.5 5.5l9 5"/></symbol>
+    <symbol id="i-file" viewBox="0 0 24 24"><path d="M14 3H6a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9ZM14 3v6h6M8 13h8M8 17h5"/></symbol>
+    <symbol id="i-trash" viewBox="0 0 24 24"><path d="M3 6h18M9 6V3h6v3M5 6l1 15h12l1-15M10 10v7M14 10v7"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path d="m6 6 12 12M6 18 18 6"/></symbol>
+    <symbol id="i-check" viewBox="0 0 24 24"><path d="m5 12 4 4L19 6"/></symbol>
+    <symbol id="i-copy" viewBox="0 0 24 24"><rect x="8" y="8" width="12" height="13" rx="2"/><path d="M16 8V3H3v13h5"/></symbol>
+  </svg>
+
+  <div class="workspace">
+    <aside class="sidebar" aria-label="侧边栏">
+      <a class="brand" href="/" aria-label="Agent Studio 首页">
+        <span class="brand-icon"><svg class="icon"><use href="#i-spark"/></svg></span>
+        <span class="brand-label">Agent<span>Studio</span></span>
+      </a>
+      <div class="workspace-label">个人工作空间 <span>LOCAL</span></div>
+      <button id="new-session" class="new-session" type="button" title="新建对话">
+        <svg class="icon"><use href="#i-plus"/></svg><span>新建对话</span>
+      </button>
+      <div class="nav-item active"><svg class="icon"><use href="#i-chat"/></svg><span>对话工作台</span><span class="nav-dot"></span></div>
+      <div class="section-label">最近对话 <span id="session-count">0</span></div>
+      <nav id="session-list" class="session-list" aria-label="最近对话"></nav>
+      <div class="sidebar-spacer"></div>
+      <div class="extension-slot">
+        <span class="extension-icon"><svg class="icon"><use href="#i-plus"/></svg></span>
+        <div><strong>为更多可能留白</strong><p>工具、工作流与更多扩展</p></div>
+      </div>
+      <div class="sidebar-footer"><span class="local-dot"></span><span>本地工作空间</span><span class="version">v0.1</span></div>
+    </aside>
+
+    <main class="chat-panel">
+      <header class="chat-header">
+        <div class="header-title"><span class="eyebrow">WORKSPACE</span><h1>对话工作台</h1></div>
+        <div class="header-actions">
+          <span id="connection-status" class="connection"><span class="status-dot"></span><span id="connection-label">正在连接</span></span>
+          <button id="mobile-new" class="icon-button mobile-new" type="button" aria-label="新建对话"><svg class="icon"><use href="#i-plus"/></svg></button>
+          <button id="toggle-inspector" class="icon-button" type="button" title="显示或隐藏记忆与状态" aria-label="显示或隐藏记忆与状态" aria-controls="inspector" aria-expanded="true"><svg class="icon"><use href="#i-panel"/></svg></button>
+        </div>
+      </header>
+
+      <div class="conversation-bar"><span id="conversation-title">新的对话</span><span class="route-badge" id="route-badge">自动路由</span></div>
+      <div id="chat-scroll" class="chat-scroll">
+        <section id="welcome" class="welcome">
+          <div class="welcome-mark"><svg class="icon"><use href="#i-spark"/></svg><span class="orbit-dot"></span></div>
+          <span class="welcome-kicker">一个问题，就是一个开始</span>
+          <h2>今天，想了解些什么？</h2>
+          <p>从商品查询到选购建议，让 Agent 帮你找到答案。<br>每一次对话，都可以看见记忆与执行过程。</p>
+          <div class="suggestions">
+            <button class="suggestion" type="button" data-prompt="NB001 有货吗">
+              <span class="suggestion-icon peach"><svg class="icon"><use href="#i-box"/></svg></span>
+              <strong>查询商品库存</strong><span>看看 NB001 还有没有货</span><svg class="icon suggestion-arrow"><use href="#i-chevron"/></svg>
+            </button>
+            <button class="suggestion" type="button" data-prompt="NB001 的参数">
+              <span class="suggestion-icon blue"><svg class="icon"><use href="#i-file"/></svg></span>
+              <strong>了解商品参数</strong><span>查看 NB001 的具体配置</span><svg class="icon suggestion-arrow"><use href="#i-chevron"/></svg>
+            </button>
+            <button class="suggestion" type="button" data-prompt="推荐一台 5000 元以内适合学习的笔记本电脑">
+              <span class="suggestion-icon lilac"><svg class="icon"><use href="#i-spark"/></svg></span>
+              <strong>寻找选购灵感</strong><span>按预算与用途挑选电脑</span><svg class="icon suggestion-arrow"><use href="#i-chevron"/></svg>
+            </button>
+          </div>
+          <div class="welcome-footnote"><span></span>也可以先说一句「你好」</div>
+        </section>
+        <div id="messages" class="messages" role="log" aria-label="对话消息" aria-live="polite" aria-relevant="additions"></div>
+        <div id="thinking" class="thinking" role="status" hidden><span class="thinking-dots"><i></i><i></i><i></i></span><span id="thinking-label">正在处理你的问题</span></div>
+      </div>
+
+      <div class="composer-area">
+        <div id="request-error" class="request-error" role="alert" hidden></div>
+        <form id="composer" class="composer">
+          <label for="message-input" class="sr-only">输入你的问题</label>
+          <textarea id="message-input" placeholder="输入你的问题，或接着上一次对话继续…" rows="2" maxlength="10000" disabled></textarea>
+          <div class="composer-bottom"><span class="composer-hint"><svg class="icon"><use href="#i-spark"/></svg>支持连续追问</span><button id="send-button" class="send-button" type="submit" disabled><span>发送</span><svg class="icon"><use href="#i-arrow"/></svg></button></div>
+        </form>
+        <div class="composer-footer"><span><kbd>Enter</kbd> 发送 <span class="footer-divider">·</span> <kbd>Shift + Enter</kbd> 换行</span><span>对话与状态同步更新</span></div>
+      </div>
+    </main>
+
+    <button id="inspector-backdrop" class="inspector-backdrop" aria-label="关闭状态面板" hidden></button>
+    <aside id="inspector" class="inspector" aria-label="对话记忆与 AgentState">
+      <header class="inspector-header"><div><svg class="icon"><use href="#i-panel"/></svg><strong>记忆与状态</strong></div><span class="live-tag"><span></span>LIVE</span><button id="close-inspector" class="icon-button" type="button" aria-label="关闭状态面板"><svg class="icon"><use href="#i-close"/></svg></button></header>
+      <div class="inspector-scroll">
+        <section class="inspector-section memory-section">
+          <div class="section-heading"><h2><svg class="icon"><use href="#i-memory"/></svg>对话记忆</h2><span id="memory-count" class="count-badge">0 条</span></div>
+          <p class="section-description">Agent 记住了什么</p>
+          <div class="summary-card"><div class="card-label"><span class="small-square"></span>历史摘要<span id="summary-tag">尚未生成</span></div><p id="memory-summary" class="muted">对话积累后，较早的内容会被整理成摘要，保留重要信息。</p></div>
+          <details class="recent-details" open><summary>近期原文 <span id="recent-count">0</span><svg class="icon"><use href="#i-chevron"/></svg></summary><div id="memory-messages" class="memory-messages"><p class="empty-note">发送第一条消息后，在这里查看记忆。</p></div></details>
+          <div class="memory-policy"><span>压缩触发 <b id="summary-trigger">&gt; 20 条</b></span><span>压缩后保留 <b id="memory-window">≤ 10 条</b></span></div>
+          <p class="policy-note">进入 Agent 路径时检查压缩阈值</p>
+        </section>
+
+        <section class="inspector-section state-section">
+          <div class="section-heading"><h2><svg class="icon"><use href="#i-state"/></svg>AgentState</h2><span id="state-status" class="state-badge" data-status="idle">等待输入</span></div>
+          <p class="section-description">这一轮，Agent 正在做什么</p>
+          <p id="queue-note" class="queue-note" hidden>请求排队中，下方显示上一轮状态。</p>
+          <div class="state-grid"><div><span>执行步数</span><strong id="state-step">0</strong><small>ReAct 循环</small></div><div><span>工具调用</span><strong id="tool-count">0</strong><small>本轮已完成</small></div></div>
+          <dl class="state-meta"><div><dt>执行路径</dt><dd id="state-route">尚未路由</dd></div><div><dt>上下文消息</dt><dd id="context-count">0 条</dd></div><div><dt>本轮耗时</dt><dd id="turn-duration">—</dd></div><div><dt>Token 用量</dt><dd id="token-count">—</dd></div></dl>
+          <details class="trace-details"><summary>工具调用记录 <span id="trace-count">0</span><svg class="icon"><use href="#i-chevron"/></svg></summary><div id="tool-events" class="tool-events"><p class="empty-note">本轮还没有工具调用。</p></div></details>
+          <details class="raw-details"><summary><svg class="icon"><use href="#i-file"/></svg>查看完整状态<svg class="icon"><use href="#i-chevron"/></svg></summary><pre id="raw-state">{}</pre></details>
+        </section>
+        <div class="inspector-footnote"><span class="local-dot"></span>记忆仅保存在内存中，服务重启后清空。</div>
+      </div>
+      <footer class="inspector-footer"><span id="sync-label">等待同步</span><span id="session-id">SESSION —</span></footer>
+    </aside>
+  </div>
+  <div id="toast" class="toast" role="status" hidden></div>
+</body>
+</html>
