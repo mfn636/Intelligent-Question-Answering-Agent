@@ -27,7 +27,16 @@ QUERY_WORDS = {
 COMPLEX_REQUEST = re.compile(
     r"推荐|比较|对比|性价比|适合|如果|否则|顺便|配件|为什么|原因|同时|并且|以及|和|"
     r"退货|退款|售后|投诉|优惠|折扣|便宜|最低|实时|今天|"
+    r"股票|沪深|行情|密钥|apis*key|管理员|密码|凭据|提示词|系统规则|"
+    r"忽略指令|忽略所有|越权|注入|刷机|解锁|绕过安全|"
     r"CPU|内存|处理器|屏幕|显卡|硬盘|续航|电池|重量|操作系统",
+    re.IGNORECASE,
+)
+SENSITIVE_REQUEST = re.compile(
+    r"色情|淫秽|裸聊|约炮|成人视频|暴力|杀人|伤人|自残|自杀|爆炸|枪支|武器|"
+    r"毒品|制毒|诈骗|盗窃|勒索|黑客攻击|入侵系统|刷机|解锁|绕过[^，。！？!?]{0,12}(?:安全|验证|限制|锁)|"
+    r"忽略(?:所有)?(?:提示词|指令|规则)|提示注入|越权|注入攻击|"
+    r"(?:api\s*key|api密钥|密钥|管理员密码|后台密码|凭据|系统提示词)",
     re.IGNORECASE,
 )
 REFERENCE = re.compile(r"它|这款|这个|那款|该商品|刚才|上面|之前")
@@ -49,7 +58,7 @@ class IntentCandidate(BaseModel):
     model_config = ConfigDict(strict=True, extra="forbid")
 
     intent: Literal[
-        "greeting", "thanks", "goodbye", "out_of_scope", "no_actionable_request",
+        "greeting", "thanks", "goodbye", "out_of_scope", "no_actionable_request", "safety_refusal",
         "inventory_lookup", "price_lookup", "product_detail", "complex_request", "unknown",
     ]
     product_id: str | None
@@ -73,6 +82,10 @@ class IntentRouter:
         social_intent = SOCIAL.get(text.lower())
         if social_intent:
             return self._direct(social_intent, "exact_social")
+
+        # 明确的敏感/违法请求直接拒绝，避免把内容交给模型或工具扩展。
+        if SENSITIVE_REQUEST.search(text):
+            return self._direct("safety_refusal", "safety_rule")
 
         mentioned_ids = product_ids(user_input)
         query_kinds = [key for key, pattern in QUERY_WORDS.items() if re.search(pattern, text)]
